@@ -15,4 +15,26 @@ class CustomerController extends Controller
         $customers = Customer::latest()->get();
         return view('backend.customer.customer_all', compact('customers'));
     }
+
+    // CustomerAdd
+    public function CustomerAdd(){
+        return view('backend.customer.customer_add');
+    } 
+
+    public function CustomerStore(Request $request){
+        Customer::insert([
+            'name' => $request->name,
+            'mobile_no' => $request->mobile_no,
+            'email' => $request->email,
+            'address' => $request->address,
+            'created_by' => Auth::user()->id,
+            'created_at' => Carbon::now(),
+        ]);
+        $notification = array(
+            'message' => 'Customer Inserted Successfully', 
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('customer.all')->with($notification);
+    }
 }

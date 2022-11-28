@@ -34,7 +34,8 @@
                                     <span>Manage Customers</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{route('customer.all')}}">All Customers</a></li>
+                                    <li><a href="{{route('customer.all')}}">All Customer</a></li>
+                                    <li><a href="{{route('customer.add')}}">Add Customer</a></li>
                                 </ul>
                             </li>
 

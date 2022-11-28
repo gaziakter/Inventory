@@ -20,7 +20,7 @@
                     <div class="card-body">
         
                         <h4 style="dispay:inline-block; float:left;" class="card-title">Customer All Data</h4>
-                        <a style="display: inline-block; float: right;" href="" class="btn btn-dark btn-rounded waves-effect wave-light">Add Customer</a>
+                        <a style="display: inline-block; float: right;" href="{{route('customer.add')}}" class="btn btn-dark btn-rounded waves-effect wave-light">Add Customer</a>
                         <br>
                         <br>
                         <hr>
