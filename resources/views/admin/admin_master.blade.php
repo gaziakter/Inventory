@@ -132,6 +132,9 @@
         <!-- Datatable init js -->
         <script src="{{asset('backend/assets/js/pages/datatables.init.js')}}"></script>
 
+            <!-- validate js -->
+            <script src="{{ asset('backend/assets/js/validate.min.js') }}"></script>
+
     </body>
 
 </html>
