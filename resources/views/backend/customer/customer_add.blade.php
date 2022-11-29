@@ -15,7 +15,7 @@
             <h4 class="card-title">Add Customer </h4> <hr>
             
 
-            <form method="post" action="{{route('customer.store')}}" id="myForm" >
+            <form method="post" action="{{route('customer.store')}}" id="myForm" enctype="multipart/form-data" >
                 @csrf
 
             <div class="row mb-3">
@@ -44,8 +44,25 @@
      
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Customer email</label>
-                <div class=" form-group col-sm-10">
+                <div class="form-group col-sm-10">
                     <input name="email" class="form-control" type="email">
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">Customer Image</label>
+                <div class="form-group col-sm-10">
+                    <input name="image" class="form-control" type="file" id="input_picture">
+                </div>
+            </div>
+            <!-- end row -->
+
+
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <img id="show_picture" src="{{url('upload/no_image.jpg')}}" alt="avatar-5" class="rounded avatar-lg">
                 </div>
             </div>
             <!-- end row -->
@@ -88,19 +105,25 @@
                  email: {
                     required : true,
                 },
+                image: {
+                    required : true,
+                },
             },
             messages :{
                 name: {
-                    required : 'Please Enter Supplier Name',
+                    required : 'Please Enter Name',
                 },
                 address: {
-                    required : 'Please Enter Supplier Address',
+                    required : 'Please Enter Address',
                 },
                 mobile_no: {
-                    required : 'Please Enter Supplier Mobile Number',
+                    required : 'Please Enter Mobile Number',
                 },
                 email: {
-                    required : 'Please Enter Supplier Email',
+                    required : 'Please Enter Email',
+                },
+                image: {
+                    required : 'Please Insert Image',
                 },
             },
             errorElement : 'span', 
@@ -118,5 +141,19 @@
     });
     
 </script>
+
+<!-- Show input or defelt image -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#input_picture').change(function(e){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $('#show_picture').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        })
+    });
+</script>
+
  
 @endsection 

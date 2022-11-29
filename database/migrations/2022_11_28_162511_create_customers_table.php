@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('mobile_no')->nullable();
             $table->string('email')->nullable();
             $table->string('address')->nullable();
+            $table->string('image')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

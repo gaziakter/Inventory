@@ -31,19 +31,18 @@
                                 <th>Serial</th>
                                 <th>Customer Name</th>
                                 <th>Customer Address</th>
-                                <th>Customer Mobile</th>
+                                <th>Customer Picture</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
-        
-        
+ 
                             <tbody>
                                 @foreach($customers as $key => $item)
                             <tr>
                                 <td>{{ $key+1}}</td>
                                 <td>{{ $item->name}}</td>
-                                <td>{{ $item->address}}</td>
-                                <td>{{ $item->mobile_no}}</td>       
+                                <td>{{ $item->address}}</td>  
+                                <td><img style="width:50px; height:auto;" src="{{ asset($item->image)}}" alt=""></td>       
                                 <td>
                                     <a href="" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
                                     <a href="" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
