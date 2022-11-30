@@ -44,8 +44,8 @@
                                 <td>{{ $item->address}}</td>  
                                 <td><img style="width:50px; height:auto;" src="{{ asset($item->image)}}" alt=""></td>       
                                 <td>
-                                    <a href="" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
-                                    <a href="" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{route('customer.edit', $item->id)}}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
+                                    <a href="{{route('customer.delete', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                                 @endforeach

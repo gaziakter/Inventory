@@ -15,7 +15,7 @@
             <h4 class="card-title">Edit Supplier </h4> <hr>
             
 
-            <form method="post" action="{{route('supplier.update')}}" id="myForm" >
+            <form method="post" action="{{route('supplier.update2')}}" id="myForm" >
                 @csrf
 
                 <input type="hidden" name="id" value="{{$supplier->id}}" >
