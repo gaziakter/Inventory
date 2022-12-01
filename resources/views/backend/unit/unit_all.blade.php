@@ -41,7 +41,7 @@
                                 <td>{{ $key+1}}</td>
                                 <td>{{ $item->name}}</td>     
                                 <td>
-                                    <a href="" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
+                                    <a href="{{route('unit.edit', $item->id)}}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
                                     <a href="" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
