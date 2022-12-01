@@ -55,4 +55,16 @@ class UnitController extends Controller
     
             return redirect()->route('unit.all')->with($notification);
         }
+
+
+        public function UnitDelete($id){
+            Unit::findOrFail($id)->delete();
+    
+            $notification = array(
+                'message' => 'Unit Deleted Successfully', 
+                'alert-type' => 'success'
+            );
+    
+            return redirect()->back()->with($notification);
+        }
 }
