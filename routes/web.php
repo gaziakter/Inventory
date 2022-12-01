@@ -5,6 +5,7 @@ use App\Http\Controllers\Demo\DemoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Pos\SupplierController;
 use App\Http\Controllers\Pos\CustomerController;
+use App\Http\Controllers\Pos\UnitController;
 
 
 Route::get('/', function () {
@@ -50,6 +51,16 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/customer/update', 'CustomerUpdate')->name('customer.update');   
     Route::get('/customer/delete/{id}', 'CustomerDelete')->name('customer.delete');   
 });
+
+
+ // Unit All Route 
+ Route::controller(UnitController::class)->group(function () {
+    Route::get('/unit/all', 'UnitAll')->name('unit.all');   
+    Route::get('/unit/add', 'UnitAdd')->name('unit.add');   
+    Route::post('/unit/store', 'UnitStore')->name('unit.store');   
+
+});
+
 
 
  
