@@ -75,4 +75,15 @@ class ProductController extends Controller
         return redirect()->route('product.all')->with($notification);
     }
 
+    public function ProductDelete($id){
+        Product::findOrfail($id)->delete();
+
+        $notification = array(
+            'message' => 'Product Deleted Successfully', 
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+    }
+
 }
