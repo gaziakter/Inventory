@@ -46,7 +46,7 @@
                                 <td>{{ $item['unit']['name']}}</td>  
                                 <td>{{ $item['category']['name']}}</td>  
                                 <td>
-                                    <a href="{{route('customer.edit', $item->id)}}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
+                                    <a href="{{route('product.edit', $item->id)}}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
                                     <a href="{{route('customer.delete', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>

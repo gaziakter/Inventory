@@ -83,8 +83,8 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/product/all', 'ProductAll')->name('product.all');   
     Route::get('/product/add', 'ProductAdd')->name('product.add');   
     Route::post('/product/store', 'productStore')->name('product.store');   
-    Route::get('/category/edit/{id}', 'categoryEdit')->name('category.edit');   
-    Route::post('/category/update/', 'CategoryUpdate')->name('category.update');   
+    Route::get('/product/edit/{id}', 'ProductEdit')->name('product.edit');   
+    Route::post('/update/update/', 'ProductUpdate')->name('update.store');   
     Route::get('/category/delete/{id}', 'CategoryDelete')->name('category.delete');   
 
 });
