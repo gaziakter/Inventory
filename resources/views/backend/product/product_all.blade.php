@@ -20,7 +20,7 @@
                     <div class="card-body">
         
                         <h4 style="dispay:inline-block; float:left;" class="card-title">Customer All Data</h4>
-                        <a style="display: inline-block; float: right;" href="{{route('customer.add')}}" class="btn btn-dark btn-rounded waves-effect wave-light">Add Customer</a>
+                        <a style="display: inline-block; float: right;" href="{{route('product.add')}}" class="btn btn-dark btn-rounded waves-effect wave-light">Add Customer</a>
                         <br>
                         <br>
                         <hr>
@@ -42,10 +42,9 @@
                             <tr>
                                 <td>{{ $key+1}}</td>
                                 <td>{{ $item->name}}</td>
-                                <td>{{ $item->supplier_id}}</td>  
-                                <td>{{ $item->unit_id}}</td>  
-                                <td>{{ $item->category_id}}</td>  
-                                <td><img style="width:50px; height:auto;" src="{{ asset($item->image)}}" alt=""></td>       
+                                <td>{{ $item['supplier']['name']}}</td>  
+                                <td>{{ $item['unit']['name']}}</td>  
+                                <td>{{ $item['category']['name']}}</td>  
                                 <td>
                                     <a href="{{route('customer.edit', $item->id)}}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
                                     <a href="{{route('customer.delete', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>

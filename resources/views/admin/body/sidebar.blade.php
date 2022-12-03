@@ -58,7 +58,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('product.all')}}">All Product</a></li>
-                                    <li><a href="">Add Product</a></li>
+                                    <li><a href="{{route('product.add')}}">Add Product</a></li>
                                 </ul>
                             </li>
                             
