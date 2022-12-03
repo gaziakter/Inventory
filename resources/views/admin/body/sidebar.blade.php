@@ -51,6 +51,17 @@
                                     <li><a href="{{route('category.add')}}">Add Category</a></li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-mail-send-line"></i>
+                                    <span>Manage Product</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('product.all')}}">All Product</a></li>
+                                    <li><a href="">Add Product</a></li>
+                                </ul>
+                            </li>
+                            
 
                             <li class="menu-title">Pages</li>
 
