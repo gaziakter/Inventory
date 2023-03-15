@@ -210,8 +210,13 @@
                  };
                  var html = tamplate(data);
                  $("#addRow").append(html); 
+            });
+
+            $(document).on("click", ".removeeventmore", function(event){
+                $(this).closest(".delete_add_more_item").remove();
             })
-        })
+
+        });
     </script>
 
 <script type="text/javascript">
