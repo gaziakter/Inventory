@@ -168,6 +168,8 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
+
+            // Show purshase item
             $(document).on("click",".addeventmore", function(){
                 var date = $('#date').val();
                 var purchase_no = $('#purchase_no').val();
@@ -212,9 +214,19 @@
                  $("#addRow").append(html); 
             });
 
+            //Delete purchase item
             $(document).on("click", ".removeeventmore", function(event){
                 $(this).closest(".delete_add_more_item").remove();
-            })
+            });
+
+            //Calcalation of total price
+            $(document).on("keyup click", ".unit_price", ".buying_qty", function(){
+                var unit_price = $(this).closest("tr").find("input.unit_price").val();
+                var qty = $(this).closest("tr").find("input.buying_qty").val();
+                var total = unit_price * qty;
+                $(this).closest("tr").find("input.buying_price").val(total);
+            });
+
 
         });
     </script>
