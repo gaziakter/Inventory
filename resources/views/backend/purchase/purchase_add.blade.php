@@ -217,15 +217,29 @@
             //Delete purchase item
             $(document).on("click", ".removeeventmore", function(event){
                 $(this).closest(".delete_add_more_item").remove();
+                totalAmountPrice();
             });
 
-            //Calcalation of total price
+            //Calculation of total price
             $(document).on("keyup click", ".unit_price", ".buying_qty", function(){
                 var unit_price = $(this).closest("tr").find("input.unit_price").val();
                 var qty = $(this).closest("tr").find("input.buying_qty").val();
                 var total = unit_price * qty;
                 $(this).closest("tr").find("input.buying_price").val(total);
+                totalAmountPrice();
             });
+
+            //Calculate sum of amount of invoice
+            function totalAmountPrice(){
+                var sum = 0;
+                $(".buying_price").each(function(){
+                    var value = $(this).val();
+                    if(!isNaN(value) && value.length != 0){
+                        sum += parseFloat(value);
+                    }
+                });
+                $("#estimated_amount").val(sum);
+            }
 
 
         });
