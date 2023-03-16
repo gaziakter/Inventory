@@ -15,7 +15,7 @@
             <h4 class="card-title">Add Purchase </h4> <hr>
             
 
-            <form method="post" action="{{route('product.store')}}" id="myForm" >
+            <form method="" action="" id="myForm" >
                 @csrf
             <div class="row">
                 <div class="col-md-4">
@@ -82,7 +82,7 @@
         </div>
         
         <div class="card-body">
-            <form method="" action="">
+            <form method="post" action="{{ route('purchase.store') }}">
                 @csrf
                 <table class="table-sm table-bordered" width="100%" style="border-color:#ddd;">
                     <thead>
