@@ -38,7 +38,7 @@
                     <div class="md-3">
                         <label for="example-text-input" class="form-label">Supplier Name</label>
                         <div class="form-group col-sm-10">
-                            <select name="supplier_id" id="supplier_id" class="form-select" aria-label="Default select example">
+                            <select name="supplier_id" id="supplier_id" class="form-select select2" aria-label="Default select example">
                                 <option selected="">Select Supplier</option>
                                     @foreach ($supplier as $sup)
                                         <option value="{{$sup->id}}">{{$sup->name}}</option>
@@ -52,7 +52,7 @@
                     <div class="md-3">
                         <label for="example-text-input" class="form-label">Category Name</label>
                         <div class="form-group col-sm-10">
-                            <select name="category_id" id="category_id" class="form-select" aria-label="Default select example">
+                            <select name="category_id" id="category_id" class="form-select select2" aria-label="Default select example">
                                 <option selected="">Select Category</option>
                             </select>
                         </div>
@@ -62,7 +62,7 @@
                     <div class="md-3">
                         <label for="example-text-input" class="form-label">Product Name</label>
                         <div class="form-group col-sm-10">
-                            <select name="product_id" id="product_id" class="form-select" aria-label="Default select example">
+                            <select name="product_id" id="product_id" class="form-select select2" aria-label="Default select example">
                                 <option selected="">Select Product</option>
                             </select>
                         </div>

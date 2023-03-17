@@ -58,7 +58,7 @@
                                 </td> 
                                 <td>
                                     @if($item->status == 0 )
-                                    <a href="{{route('purchase.approve', $item->id)}}" class="btn btn-danger sm" title="Approve" id="approvebrn"><i class="fas fa-check-circle"></i></a>
+                                    <a href="{{route('purchase.approve', $item->id)}}" class="btn btn-info sm" title="Approve" id="approvebrn"><i class="fas fa-check-circle"></i></a>
                                     @endif
                                 </td>
                             </tr>
