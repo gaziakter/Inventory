@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Purchase All</h4>
+                    <h4 class="mb-sm-0">Purchase Pending</h4>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 style="dispay:inline-block; float:left;" class="card-title">Purchase All Data</h4>
+                        <h4 style="dispay:inline-block; float:left;" class="card-title">Purchase Pending</h4>
                         <a style="display: inline-block; float: right;" href="{{route('purchase.add')}}" class="btn btn-dark btn-rounded waves-effect wave-light">Add Purchase</a>
                         <br>
                         <br>
@@ -58,7 +58,7 @@
                                 </td> 
                                 <td>
                                     @if($item->status == 0 )
-                                    <a href="{{route('purchase.delete', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{route('purchase.approve', $item->id)}}" class="btn btn-danger sm" title="Approve" id="approvebrn"><i class="fas fa-check-circle"></i></a>
                                     @endif
                                 </td>
                             </tr>
