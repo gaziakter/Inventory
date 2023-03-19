@@ -19,7 +19,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 style="dispay:inline-block; float:left;" class="card-title">Invoice All Data</h4>
-                        <a style="display: inline-block; float: right;" href="{{route('purchase.add')}}" class="btn btn-dark btn-rounded waves-effect wave-light">Add Invoice</a>
+                        <a style="display: inline-block; float: right;" href="{{route('invoice.add')}}" class="btn btn-dark btn-rounded waves-effect wave-light">Add Invoice</a>
                         <br>
                         <br>
                         <hr>
