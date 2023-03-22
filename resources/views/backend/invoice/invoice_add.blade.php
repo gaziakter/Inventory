@@ -14,9 +14,6 @@
 
             <h4 class="card-title">Add Invoice </h4> <hr>
             
-
-            <form method="" action="" id="myForm" >
-                @csrf
             <div class="row">
                 <div class="col-md-1">
                     <div class="md-3">
@@ -76,11 +73,10 @@
                 </div>
             </div><!-- end row -->
 
-            </form>
         </div>
         
         <div class="card-body">
-            <form method="post" action="">
+            <form method="post" action="{{route('invoice.store')}}">
                 @csrf
                 <table class="table-sm table-bordered" width="100%" style="border-color:#ddd;">
                     <thead>
@@ -178,8 +174,8 @@
 <script id="document-template" type="text/x-handlebars-template">
 
     <tr class="delete_add_more_item" id="delete_add_more_item">
-            <input type="hidden" name="date[]" value="@{{date}}">
-            <input type="hidden" name="purchase_no[]" value="@{{purchase_no}}">
+            <input type="hidden" name="date" value="@{{date}}">
+            <input type="hidden" name="invoice_no" value="@{{invoice_no}}">
             <input type="hidden" name="supplier_id[]" value="@{{supplier_id}}">
     
         <td>

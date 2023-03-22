@@ -40,11 +40,10 @@
                                 @foreach($allData as $key => $item)
                             <tr>
                                 <td> {{ $key+1}} </td>
-                                <td>  </td> 
+                                <td>  Customer name</td> 
                                 <td> {{ $item->invoice_no }} </td> 
                                 <td> {{ date('d-m-Y',strtotime($item->date))  }} </td> 
                                 <td> {{ $item->description }} </td> 
-                                <td> 
                                 <td>
                                     <a href="{{route('purchase.delete', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
                                 </td>
