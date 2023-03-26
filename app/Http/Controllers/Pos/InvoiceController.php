@@ -235,4 +235,5 @@ class InvoiceController extends Controller
             $end_date = date('Y-m-d',strtotime($request->end_date));
             return view('backend.pdf.daily_invoice_report_pdf',compact('allData','start_date','end_date'));
         } // End Method
+
 }
